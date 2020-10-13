@@ -1,16 +1,24 @@
 # flutterfinaldevproject_x17138744
 
-A new Flutter project.
+A Flutter project. A Firebase application in combination with Flutter and for mobile web development. Signing in and out with Firbase Auth.
 
-## Getting Started
+# Content
 
-This project is a starting point for a Flutter application.
+## Useful Links 
 
-A few resources to get you started if this is your first Flutter project:
+A few resources to get you started if you want to find out the tools used in this project
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+To find out where all the data ended up.
+https://console.firebase.google.com/
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Package used for streaming data to widgets.
+https://pub.dev/packages/provider
+
+Material Design and trying to make the app look good
+https://material.io/develop/flutter/
+
+
+
+
+
+
