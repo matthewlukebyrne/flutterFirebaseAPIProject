@@ -13,30 +13,28 @@ class _SignInUserState extends State<SignInUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.black87,
-        title: Text('Sign into the Application'),
+        title: Text('Sign In User'),
+        backgroundColor: Colors.red,
+        actions: [
+          FlatButton.icon(
+            icon: Icon(Icons.person),
+            label: Icon(Icons.logout),
+            onPressed: () async {
+              await _auth.signInAnon();
+              print('User Signed In');
+            },
+          )
+        ],
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
-        child: RaisedButton(
-          child: Text('Sign in Anonmously'),
-          onPressed: () async {
-            dynamic result = await _auth.signInAnon();
-            if (result == null) {
-              print('error signing in');
-            } else {
-              print('signed in');
-              print(result);
-            }
-          },
-        ),
-      ),
+      body: Container(),
     );
   }
 }
 
+// ****************Notes*************************
+
 // the onPressed propety here is important. we get a instance of the AuthService Class and then inside onPressed we AWAIT the signInAnon() function that either returns a user or returns us null
 
-// result returns a object (UID, displayName, email) along with other properties from Firebase
+// result returns a object (UID, displayName, email) along with other properties from Firebase. This is now updated to our our very own UserDeets class which returns a UID. We can include more in this if we wanted to.
