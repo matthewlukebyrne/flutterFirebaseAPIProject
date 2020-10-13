@@ -1,6 +1,6 @@
 # flutterfinaldevproject_x17138744
 
-A Flutter project. A Firebase application in combination with Flutter and for mobile web development. Signing in and out with Firbase Auth.
+A Flutter project. A Firebase application in combination with Flutter and for mobile web development. Signing in and out with Firebase Auth.
 
 # Content
 

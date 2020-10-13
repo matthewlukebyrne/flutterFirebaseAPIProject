@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/autharea/auth-screen.dart';
+import 'package:flutterfinaldevproject_x17138744/screens/autharea/auth-toggle.dart';
 import 'package:flutterfinaldevproject_x17138744/screens/homearea/home-screen.dart';
 import 'package:flutterfinaldevproject_x17138744/screens/models/user.dart';
 import 'package:provider/provider.dart';
