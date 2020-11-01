@@ -3,13 +3,14 @@ import 'package:flutterfinaldevproject_x17138744/screens/services/firebase-auth.
 import 'package:flutterfinaldevproject_x17138744/screens/models/user.dart';
 import 'package:flutterfinaldevproject_x17138744/screens/wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutterfinaldevproject_x17138744/shared/splashscreen.dart';
 import 'package:provider/provider.dart';
 
 // The main function that runs the main method which fires MyApp()
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(SplashScreen()); // run splash screen
 }
 
 class MyApp extends StatelessWidget {
