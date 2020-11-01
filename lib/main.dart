@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/auth-logic/firebase-auth.dart';
+import 'package:flutterfinaldevproject_x17138744/screens/services/firebase-auth.dart';
 import 'package:flutterfinaldevproject_x17138744/screens/models/user.dart';
 import 'package:flutterfinaldevproject_x17138744/screens/wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       value: AuthService().userStream,
       child: MaterialApp(
         home: Wrapper(),
+        debugShowCheckedModeBanner: false,
       ),
     );
   }

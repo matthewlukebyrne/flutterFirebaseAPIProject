@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/autharea/auth-toggle.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/homearea/home-screen.dart';
+import 'package:flutterfinaldevproject_x17138744/screens/autharea/authenticate.dart';
+import 'package:flutterfinaldevproject_x17138744/screens/homearea/home.dart';
 import 'package:flutterfinaldevproject_x17138744/screens/models/user.dart';
 import 'package:provider/provider.dart';
 
@@ -10,9 +10,11 @@ class Wrapper extends StatelessWidget {
     // passing the state of sign in and sign out using the package provider
     // everytime a user logs in they are getting a user object stored in this user value, else it gets null.
 
-    // So simply a condition can then be made to decide this
+    // Accessing the user data from the provider
     final user = Provider.of<UserDeets>(context);
+    print(user);
 
+    // return either Home or Authenticate widget
     if (user == null) {
       return AuthUser();
     } else {

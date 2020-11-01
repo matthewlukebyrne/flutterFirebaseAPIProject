@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/autharea/signin-screen.dart';
+import 'package:flutterfinaldevproject_x17138744/screens/autharea/register.dart';
+import 'package:flutterfinaldevproject_x17138744/screens/autharea/signin.dart';
 
 class AuthUser extends StatefulWidget {
   @override
@@ -7,11 +8,22 @@ class AuthUser extends StatefulWidget {
 }
 
 class _AuthUserState extends State<AuthUser> {
+  bool showSignIn = true;
+
+  // pass down this function to toggle
+  void toggleView() {
+    setState(() {
+      showSignIn = !showSignIn; // get the reverse of what it currently is
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SignInUser(),
-    );
+    if (showSignIn) {
+      return SignInUser(toggleView: toggleView);
+    } else {
+      return Register(toggleView: toggleView);
+    }
   }
 }
 
