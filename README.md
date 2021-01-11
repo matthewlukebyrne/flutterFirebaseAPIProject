@@ -1,7 +1,7 @@
-# x17138744_codebase
+# x17138744_codebase_mobile_dev
+Mobile Development in Flutter; a stamp collection style application. QR scanner to update your stamps and gain rewards.
 
-A new Flutter project.
-
+# Working Title
 ![swish](assets/swish_logo.png)
 
 ## Getting Started
