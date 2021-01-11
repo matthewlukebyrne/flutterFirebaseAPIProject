@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-![swish](assets/logo_swish.png)
+![swish](assets/swish_logo.png)
 
 ## Getting Started
 
