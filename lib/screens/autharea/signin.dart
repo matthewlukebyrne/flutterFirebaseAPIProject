@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/services/firebase-auth.dart';
-import 'package:flutterfinaldevproject_x17138744/shared/constants.dart';
-import 'package:flutterfinaldevproject_x17138744/shared/loading.dart';
+import 'package:x17138744_codebase/screens/services/firebase-auth.dart';
+import 'package:x17138744_codebase/shared/constants.dart';
+import 'package:x17138744_codebase/shared/loading.dart';
 
 class SignInUser extends StatefulWidget {
   // Create a function to accept the toggle functionality

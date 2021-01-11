@@ -1,18 +1,21 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:x17138744_codebase/screens/models/user.dart';
+import 'package:x17138744_codebase/models/user.dart';
+import 'package:x17138744_codebase/services/database.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  UserDeets _userFromFirebaseUser(User user) {
-    return user != null ? UserDeets(uid: user.uid) : null;
+  // create user obj based on firebase user
+  Users _userFromFirebaseUser(User user) {
+    return user != null ? Users(uid: user.uid) : null;
   }
 
-  Stream<UserDeets> get userStream {
+  // auth change user stream
+  Stream<Users> get userStream {
     return _auth.authStateChanges().map(_userFromFirebaseUser);
   }
 
-  // sign in user anonmously with Firebase
+  // sign in anon
   Future signInAnon() async {
     try {
       UserCredential result = await _auth.signInAnonymously();
@@ -26,11 +29,13 @@ class AuthService {
 
   // Register with email and password (with validation)
   // Using the instance of Firebase auth to send the deets to Firebase
-  Future registerWithEmailandPassword(String email, String password) async {
+  Future createUserWithEmailAndPassword(String email, String password) async {
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       User user = result.user;
+      await DatabaseService(uid: user.uid)
+          .updateUserData('Swish User', 'Coffeeshops', 3.0);
       return _userFromFirebaseUser(user);
     } catch (e) {
       print(e.toString());
@@ -39,7 +44,7 @@ class AuthService {
   }
 
   // Create a method to sign in with Firebase
-  Future loginWithEmailandPassword(String email, String password) async {
+  Future signInWithEmailandPassword(String email, String password) async {
     try {
       UserCredential result = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
@@ -51,25 +56,13 @@ class AuthService {
     }
   }
 
-  // sign out user method
+  // sign out
   Future signOut() async {
     try {
       return await _auth.signOut();
-    } catch (e) {
-      print(e.toString());
+    } catch (error) {
+      print(error.toString());
       return null;
     }
   }
 }
-
-// ****************Notes*************************
-
-// creates a new instance of the firebase auth
-
-// creates user object based on FirebaseUser with UID model class UserDeets inside models/user.dart
-
-// auth change user stream = setting up a stream so that everytime a user signs in and signsout with OUR UID model class UserDeets
-
-// Future = this widget will use a async feature in flutter called a "Future" which is very similar to a Promise in JavaScript
-
-// https://api.flutter.dev/flutter/dart-async/Future-class.html

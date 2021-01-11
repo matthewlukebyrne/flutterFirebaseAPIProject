@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/autharea/register.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/autharea/signin.dart';
+import 'package:x17138744_codebase/screens/autharea/register.dart';
+import 'package:x17138744_codebase/screens/autharea/signin.dart';
 
 class AuthUser extends StatefulWidget {
   @override

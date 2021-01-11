@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfinaldevproject_x17138744/screens/services/firebase-auth.dart';
+import 'package:x17138744_codebase/screens/services/firebase-auth.dart';
 
 class Home extends StatelessWidget {
   // get a instance for the sign out from the auth.dart

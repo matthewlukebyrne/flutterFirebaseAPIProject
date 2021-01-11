@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="412" height="847" viewBox="0 0 412 847">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.673" y1="0.335" x2="0.201" y2="0.968" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f6a0ac"/>
+      <stop offset="0.504" stop-color="#385560"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <filter id="Ellipse_19" x="-388" y="-211" width="1188" height="1276" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_29" x="-388" y="-211" width="1188" height="1276" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Home">
+      <rect width="412" height="847"/>
+    </clipPath>
+  </defs>
+  <g id="Home" clip-path="url(#clip-Home)">
+    <rect width="412" height="847" fill="#fff"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_19)">
+      <ellipse id="Ellipse_19-2" data-name="Ellipse 19" cx="585" cy="629" rx="585" ry="629" transform="translate(-379 -205)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_29)">
+      <ellipse id="Ellipse_29-2" data-name="Ellipse 29" cx="585" cy="629" rx="585" ry="629" transform="translate(-379 -205)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
